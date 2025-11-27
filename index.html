@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de alunos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD de alunos</h1>
+        <!-- Formulário para adicionar um novo registro-->
+         <form id="aluno-form">
+            <div class="input-group">
+                <input type="text" name="nome" id="nome" placeholder="Digite o nome do aluno" required>
+                <input type="number" name="idade" id="idade" placeholder="Idade" required>
+                <input type="text" name="curso" id="curso" placeholder="Digite o curso do aluno" required >
+            </div>
+            <button type="submit" id="submit-btn">Adicionar</button>
+         </form>
+
+        <!-- Listagem -->
+         <h2>Lista de alunos</h2>
+         <ul id="alunos-list">
+            
+         </ul>
+    </div>
+
+    <!-- Modal de Confirmação -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h3>Confirmar Exclusão</h3>
+            <p>Tem certeza que deseja apagar este registro?</p>
+            <div class="modal-actions">
+                <button id="cancel-btn" class="cancelar">Cancelar</button>
+                <button id="confirm-btn" class="excluir">Excluir</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
