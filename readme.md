@@ -1,82 +1,56 @@
-# 📝 Atividade Prática 03
-#  Atualização de Alunos no Frontend
+# 🎓 Gerenciador de Alunos (CRUD)
 
-## Objetivo
+Este projeto é uma aplicação web para o gerenciamento de alunos, desenvolvida como parte da **Atividade Prática 03** da disciplina de Programação para Internet 2 (PPI2).
 
-Implementar a função `atualizarAluno(id)` no frontend para permitir **editar os dados dos alunos** de forma interativa, consumindo a API já existente (`Node.js + Express + MongoDB`).
+A aplicação permite realizar operações completas de **CRUD** (Criar, Ler, Atualizar e Deletar) consumindo uma API REST.
 
-O foco é praticar **fetch API, manipulação do DOM e integração com backend**.
+## 🚀 Funcionalidades
 
----
+- **Listagem de Alunos**: Exibe todos os alunos cadastrados com nome, idade e curso.
+- **Cadastro**: Formulário para adicionar novos alunos.
+- **Edição**: Permite atualizar os dados de um aluno existente reutilizando o formulário principal.
+- **Exclusão Segura**: Modal de confirmação personalizado antes de apagar um registro.
+- **Interface Moderna**:
+  - Tema Escuro (Dark Mode) com paleta de cores em **Preto, Amarelo e Verde**.
+  - Design responsivo e estilizado com CSS moderno.
+  - Feedback visual interativo (hover effects, focus states).
 
-## Repositório base
+## 🛠️ Tecnologias Utilizadas
 
-Os arquivos já disponíveis estão no repositório:
+- **HTML5**: Estrutura semântica.
+- **CSS3**: Estilização personalizada, Flexbox, e variáveis.
+- **JavaScript (Vanilla)**: Manipulação do DOM e consumo de API via `fetch`.
+- **Google Fonts**: Tipografia moderna com a fonte 'Inter'.
 
-```
-aula_06_pi2_2025/
-├─ index.html
-├─ style.css
-├─ script.js
-```
+## 🎨 Identidade Visual
 
-* Clonar o repositório:
+O projeto segue uma paleta de cores de alto contraste:
 
-```bash
-git clone https://github.com/seu-usuario/aula_06_pi2_2025.git
-cd aula_06_pi2_2025
-```
+- **Fundo**: Preto (`#000000` / `#111111`)
+- **Destaques**: Amarelo Ouro (`#FFD700`)
+- **Ações Positivas (Editar)**: Verde (`#00C853`)
+- **Ações Destrutivas (Excluir)**: Vermelho (`#d32f2f`)
 
----
+## 📦 Como Executar
 
-## Instruções
-
-1. **Entender o código existente**
-
-   * `carregarAlunos()` → lista os alunos da API.
-   * `deletarAluno(id)` → apaga um registro.
-   * `form.addEventListener("submit")` → cria novo aluno.
-
-2. **Implementar `atualizarAluno(id)`**
-
-   * A função deve permitir **editar o nome, idade e curso** do aluno selecionado.
-   * Pode ser feito:
-
-     * **Inline** (inputs aparecem no lugar do item da lista) **ou**
-     * **Usando um formulário de edição** que preenche os campos existentes.
-
-3. **Enviar atualização para o backend**
-
-   * Usar `fetch` com método `PUT` (ou `PATCH`) para `API_URL/id`.
-   * Enviar os campos atualizados como JSON.
-   * Atualizar a lista de alunos após a edição.
-
-4. **Atualizar HTML/CSS se necessário**
-
-   * Pode adicionar classes, inputs ou botões no `index.html`.
-   * Ajustar o estilo no `style.css` para que a edição fique clara e funcional.
-
-5. **Testar**
-
-   * Criar um novo aluno.
-   * Editar o aluno usando a função implementada.
-   * Verificar se as alterações aparecem na lista e no banco de dados.
+1. **Backend**: Certifique-se de que a API está rodando localmente na porta `3000`.
+   - Endpoint base: `http://localhost:3000/alunos`
+2. **Frontend**:
+   - Clone este repositório.
+   - Abra o arquivo `index.html` em seu navegador de preferência.
 
 ---
 
-## Entregável
+## 📝 Instruções Originais da Atividade
 
-* **Link do repositório no GitHub** com o código atualizado, incluindo:
+### Objetivo
 
-  * `script.js` com a função `atualizarAluno(id)` implementada.
-  * Eventuais alterações no `index.html` e `style.css`.
-  * Certifique-se de que o projeto **funciona localmente** antes de enviar.
+Implementar a função `atualizarAluno(id)` no frontend para permitir **editar os dados dos alunos** de forma interativa.
 
----
+### Requisitos Atendidos
 
-## Dicas
-
-* Para edição inline, pode usar `prompt()` para facilitar ou criar inputs dinamicamente.
-* Lembre-se de chamar `carregarAlunos()` após o PUT/PATCH para atualizar a lista.
-* Teste cada passo antes de prosseguir.
-
+- [x] `carregarAlunos()`: Listagem implementada.
+- [x] `deletarAluno(id)`: Exclusão com modal de confirmação.
+- [x] `atualizarAluno(id)`: Edição populando o formulário principal.
+- [x] `PUT/PATCH`: Envio de dados atualizados para o backend.
+- [x] Estilização aprimorada.
